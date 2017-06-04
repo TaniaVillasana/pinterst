@@ -24,7 +24,7 @@
     <% @pins.each do |pin| %>
       <tr>
         <td><%= image_tag(pin.photo, :style => 'width:300px') %></td>
-        <td><%= pinheroku run rake db:migrate  .description %></td>
+        <td><%= pin.description %></td>
         <td><%= link_to 'Show', pin %></td>
         <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
         <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
